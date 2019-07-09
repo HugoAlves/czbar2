@@ -37,7 +37,7 @@
             <uses-permission android:name="android.permission.CAMERA"/>
         </config-file>
         <config-file target="res/values/strings.xml" parent="/*">
-            <string name="csZbarScannerTitle">Pagamento por QR Code</string>
+            <string name="csZbarScannerTitle">QR Code</string>
             <string name="csZbarScannerInstructions">Procure o QR code com a sua câmara.</string>
             <color name="csZbarScannerTextColor">#ffffff</color>
             <color name="csZbarScannerTextBackground">#88000000</color>
