@@ -78,8 +78,8 @@
         } else {
             infoButtonIndex = 3;
         }
-        UIView *infoButton = [[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
-        [infoButton setHidden:YES];
+        //UIView *infoButton = [[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
+        //[infoButton setHidden:YES];
 
         NSArray *viewArray = [[[[[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews];
         if([viewArray count] > 0){
@@ -87,6 +87,17 @@
             [infoButton setHidden:YES];
         }
 		
+		float currentVersion = 5.1;
+		float sysVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+
+		UIView * infoButton;
+
+		if (sysVersion > currentVersion && sysVersion < 10 )
+			infoButton = [[[[[codeReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:3];
+		else
+			infoButton = [[[[[codeReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:1];
+
+		[infoButton setHidden:YES];
 		
 
 
