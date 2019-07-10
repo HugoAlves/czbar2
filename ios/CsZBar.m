@@ -72,33 +72,17 @@
         }
 
         // Hack to hide the bottom bar's Info button... originally based on http://stackoverflow.com/a/16353530
-	NSInteger infoButtonIndex;
-        if ([[[UIDevice currentDevice] systemVersion] compare:@"10.0" options:NSNumericSearch] != NSOrderedAscending) {
-            infoButtonIndex = 1;
-        } else {
-            infoButtonIndex = 3;
-        }
-        //UIView *infoButton = [[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
-        //[infoButton setHidden:YES];
 
-        NSArray *viewArray = [[[[[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews];
-        if([viewArray count] > 0){
-            UIView *infoButton = [[[[[[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
-            [infoButton setHidden:YES];
-        }
-		
-		float currentVersion = 5.1;
-		float sysVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+	float currentVersion = 5.1;
+	float sysVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
 
-		UIView * infoButton;
+	UIView * infoButton;
+	if (sysVersion > currentVersion)
+	   infoButton = [[[[[reader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:3];
+	else
+	   infoButton = [[[[[reader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:2];
+	[infoButton setHidden:YES];
 
-		if (sysVersion > currentVersion && sysVersion < 10 )
-			infoButton = [[[[[codeReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:3];
-		else
-			infoButton = [[[[[codeReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:1];
-
-		[infoButton setHidden:YES];
-		
 
 
 
