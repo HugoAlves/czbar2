@@ -81,9 +81,9 @@
         //UIView *infoButton = [[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
         //[infoButton setHidden:YES];
 
-        NSArray *viewArray = [[[[[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews];
+        NSArray *viewArray = [[[[[[[[self.scanReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews];
         if([viewArray count] > 0){
-            UIView *infoButton = [[[[[[[[[self.scanReader.view.subviews objectAtIndex:2] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
+            UIView *infoButton = [[[[[[[[[self.scanReader.view.subviews objectAtIndex:1] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:0] subviews] objectAtIndex:infoButtonIndex];
             [infoButton setHidden:YES];
         }
 
