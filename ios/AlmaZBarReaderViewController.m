@@ -13,6 +13,19 @@
 
 @implementation AlmaZBarReaderViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // https://stackoverflow.com/a/25447669
+    // Access the toolbar from superclass
+    UIToolbar *toolbar = [[controls subviews] firstObject];
+
+    // Only keep the first two items of the toolbar, thus deleting the info button
+    if ([toolbar isKindOfClass:UIToolbar.class]) {
+        toolbar.items = @[ toolbar.items[0], toolbar.items[1] ];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
