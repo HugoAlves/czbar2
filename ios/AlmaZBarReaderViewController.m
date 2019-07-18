@@ -70,10 +70,31 @@
         UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake  ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
 
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
-        lineView.backgroundColor = [UIColor orangeColor];
+        lineView.backgroundColor = [UIColor redColor];
         [polygonView addSubview:lineView];
         self.cameraOverlayView = polygonView;
     }
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    UIToolbar* toolbar = [[controls subviews] firstObject];
+    if (![toolbar isKindOfClass:UIToolbar.class])
+        return;
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
+    // HACK to hide the Info button
+    for (UIBarButtonItem* item in [toolbar items]) {
+        UIButton* button = [item customView];
+        if ([button isKindOfClass:UIButton.class]) {
+            UIButtonType buttonType = [button buttonType];
+            if (buttonType == UIButtonTypeInfoDark || buttonType == UIButtonTypeInfoLight) {
+                [button setHidden:YES];
+            }
+        }
+    }
+#endif
 }
 
 @end
