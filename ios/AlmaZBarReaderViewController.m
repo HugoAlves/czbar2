@@ -94,22 +94,7 @@
             }
         }
     }
-	//TR change cancel text	
--(void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
-    self.searchDisplayController.searchBar.showsCancelButton = YES;
-    UIButton *cancelButton;
-    UIView *topView = self.searchDisplayController.searchBar.subviews[0];
-    for (UIView *subView in topView.subviews) {
-        if ([subView isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
-            cancelButton = (UIButton*)subView;
-        }
-  }
-    if (cancelButton) {
-                [cancelButton setTitle:@"Cancelar" forState:UIControlStateNormal];
-    }
-}
 
-//end trying
 #endif
 }
 
