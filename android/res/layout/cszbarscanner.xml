@@ -2,12 +2,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/csZbarScannerView"
     android:layout_width="match_parent"
-    android:layout_height="350dp"
+    android:layout_height="match_parent"
     android:background="@color/csZbarScannerBackground" >
 
     <TextView android:id="@+id/csZbarScannerTitle"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top|center_horizontal"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
