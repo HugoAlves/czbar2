@@ -135,11 +135,12 @@
 			///begintest
 			
 			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
-            polygonView.center = self.scanReader.view.center;
-            polygonView.layer.borderColor = [UIColor greenColor].CGColor;
+            //polygonView.center = self.scanReader.view.center;
+            polygonView.layer.borderColor = [UIColor whiteColor].CGColor;
             polygonView.layer.borderWidth = 3.0f;
-
-            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(dim / 2, 0, 1, dim)];
+			
+			UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, dim / 2, dim, 1)];
+            //UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(dim / 2, 0, 1, dim)];
             lineView.backgroundColor = [UIColor redColor];
             [polygonView addSubview:lineView];
 
