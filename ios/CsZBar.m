@@ -123,7 +123,7 @@
         [self.scanReader.view addSubview:toolbarViewFlash];
 
         if (drawSight) {
-            CGFloat dim = screenWidth < screenHeight ? screenWidth / 1.1 : screenHeight / 1.1;
+            CGFloat dim = screenWidth < screenHeight ? screenWidth / 1.5 : screenHeight / 1.5;
             //UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake  ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
             
             //UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
@@ -134,7 +134,7 @@
 
 			///begintest
 			
-			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim+1/2), (screenHeight/2) - (dim+1/2), dim-1, dim-1)];
+			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim-1/2), (screenHeight/2) - (dim-1/2), dim, dim)];
             //polygonView.center = self.scanReader.view.center;
             polygonView.layer.borderColor = [UIColor whiteColor].CGColor;
             polygonView.layer.borderWidth = 3.0f;
