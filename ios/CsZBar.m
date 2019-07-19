@@ -124,18 +124,39 @@
 
         if (drawSight) {
             CGFloat dim = screenWidth < screenHeight ? screenWidth / 1.1 : screenHeight / 1.1;
-            UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake  ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
+            //UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake  ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
             
-            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
-            lineView.backgroundColor = [UIColor orangeColor];
+            //UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
+            //lineView.backgroundColor = [UIColor orangeColor];
 			
-			UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(1,1, 1, 1)];
-            lineView2.backgroundColor = [UIColor orangeColor];
 			
+            //[polygonView addSubview:lineView];
+			
+			
+			
+			///begintest
+			
+			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
+            //polygonView.center = self.scanReader.view.center;
+            //polygonView.layer.borderColor = [UIColor greenColor].CGColor;
+            //polygonView.layer.borderWidth = 3.0f;
+
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, dim / 2, dim, 1)];
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(dim / 2, 0, 1, dim)];
+            lineView.backgroundColor = [UIColor redColor];
             [polygonView addSubview:lineView];
-			[polygonView addSubview:lineView2];
+
+			
+			
+			//endtest
+			
 			
             self.scanReader.cameraOverlayView = polygonView;
+			
+			
+			
+			
+			
         }
 
         [self.viewController presentViewController:self.scanReader animated:YES completion:nil];
