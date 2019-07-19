@@ -134,7 +134,7 @@
 
 			///begintest
 			
-			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim-1/2), (screenHeight/2) - (dim-1/2), dim-1, dim-1)];
+			 UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake ( (screenWidth/2) - (dim+1/2), (screenHeight/2) - (dim+1/2), dim-1, dim-1)];
             //polygonView.center = self.scanReader.view.center;
             polygonView.layer.borderColor = [UIColor whiteColor].CGColor;
             polygonView.layer.borderWidth = 3.0f;
