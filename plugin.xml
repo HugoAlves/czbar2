@@ -40,7 +40,7 @@
             <string name="csZbarScannerTitle">QR Code</string>
             <string name="csZbarScannerInstructions">Procure o QR code com a sua câmara.</string>
             <color name="csZbarScannerTextColor">#ffffff</color>
-            <color name="csZbarScannerTextBackground">#88000000</color>
+            <color name="csZbarScannerTextBackground">#FF6600</color>
             <color name="csZbarScannerBackground">#000000</color>
         </config-file>
         <framework src="com.android.support:support-v4:23.1.0" />

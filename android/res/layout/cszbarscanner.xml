@@ -3,7 +3,7 @@
     android:id="@+id/csZbarScannerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF6600" >
+    android:background="@color/csZbarScannerBackground" >
 
     <TextView android:id="@+id/csZbarScannerTitle"
         android:layout_width="match_parent"
@@ -15,8 +15,8 @@
         android:paddingRight="5dp"
         android:gravity="center"
         android:text="@string/csZbarScannerTitle"
-        android:textColor="@color/csZbarScannerTextColor"
-        android:background="@color/csZbarScannerTextBackground"
+        android:textColor="#FFFFFF"
+        android:background="#FF6600"
         android:fontFamily="sans-serif-light"
         android:textSize="15pt" />
 
