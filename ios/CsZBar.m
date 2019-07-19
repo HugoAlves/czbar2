@@ -91,9 +91,10 @@
         BOOL drawSight = [params objectForKey:@"drawSight"] ? [[params objectForKey:@"drawSight"] boolValue] : true;
         UIToolbar *toolbarViewFlash = [[UIToolbar alloc] init];
         
-        //The bar length it depends on the orientation
-        toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 33.0);
+        //The bar length it depends on the orientation - altura da barra superior
+        toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
         toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
+		toolbarViewFlash.backgroundColor = [UIColor orangeColor];
         //UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
         //        UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
 //begin of torch icon
