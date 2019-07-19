@@ -96,8 +96,8 @@
         //toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
 		
 		toolbarViewFlash.barStyle = UIBarStyle.Black;
-		toolbarViewFlash.tintColor = UIColor.whiteColor();
-		toolbarViewFlash.sizeToFit();
+		//toolbarViewFlash.tintColor = UIColor.whiteColor();
+		//toolbarViewFlash.sizeToFit();
 		//toolbarViewFlash.backgroundColor = [UIColor orangeColor];
 		//toolbarViewFlash.appearance().barTintColor = [UIColor orangeColor];
 		//toolbarViewFlash.appearance().tintColor = [UIColor orangeColor]; 
