@@ -94,9 +94,13 @@
         //The bar length it depends on the orientation - altura da barra superior
         toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
         //toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
+		
+		toolBar.barStyle = UIBarStyle.Black;
+		toolBar.tintColor = UIColor.whiteColor();
+		toolBar.sizeToFit();
 		//toolbarViewFlash.backgroundColor = [UIColor orangeColor];
-		toolbarViewFlash.appearance().barTintColor = [UIColor orangeColor];
-		toolbarViewFlash.appearance().tintColor = [UIColor orangeColor]; 
+		//toolbarViewFlash.appearance().barTintColor = [UIColor orangeColor];
+		//toolbarViewFlash.appearance().tintColor = [UIColor orangeColor]; 
 		
         //UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
         //        UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
