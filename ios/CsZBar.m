@@ -93,7 +93,7 @@
         
         //The bar length it depends on the orientation - altura da barra superior
         toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
-        //toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
+        toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
 		
 		//toolbarViewFlash.barStyle = UIBarStyle.Black;
 		//toolbarViewFlash.tintColor = UIColor.whiteColor();
@@ -128,8 +128,13 @@
             
             UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
             lineView.backgroundColor = [UIColor orangeColor];
+			
+			UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(1,1, 1, 1)];
+            lineView2.backgroundColor = [UIColor orangeColor];
+			
             [polygonView addSubview:lineView];
-
+			[polygonView addSubview:lineView2];
+			
             self.scanReader.cameraOverlayView = polygonView;
         }
 
