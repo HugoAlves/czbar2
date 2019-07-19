@@ -93,8 +93,11 @@
         
         //The bar length it depends on the orientation - altura da barra superior
         toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
-        toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
+        //toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
 		toolbarViewFlash.backgroundColor = [UIColor orangeColor];
+		toolbarViewFlash.appearance().barTintColor = [UIColor orangeColor];
+		toolbarViewFlash.appearance().tintColor = [UIColor whiteColor]; 
+		
         //UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
         //        UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
 //begin of torch icon
