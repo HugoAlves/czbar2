@@ -144,7 +144,7 @@
 			// UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, dim / 2, dim, 1)];
             //UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(dim / 2, 0, 1, dim)];
             //lineView.backgroundColor = [UIColor orangeColor];
-            [polygonView addSubview:lineView];
+            //[polygonView addSubview:lineView];
 
 			
 			
