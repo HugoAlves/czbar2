@@ -55,6 +55,11 @@
     [obj toggleflash];
 }
 
+- (void)cancelButtonPressed:(id)sender {
+    [self.captureSession stopRunning]; //stop the capture session
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil]; // dismiss the current view controller
+}
+
 - (BOOL)shouldAutorotate{
     return NO;
 }
@@ -74,6 +79,7 @@
         // polygonView.center = self.scanReader.view.center;
         polygonView.layer.borderColor = [UIColor whiteColor].CGColor;
         polygonView.layer.borderWidth = 2.0f;
+		polygonView.layer.cornerRadius = 20.0f;
 
         // UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
         // lineView.backgroundColor = [UIColor orangeColor];

@@ -105,7 +105,7 @@
 		//toolbarViewFlash.appearance().tintColor = [UIColor orangeColor]; 
 		
         //UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
-        //        UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
+        //UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
 //begin of torch icon
 
         NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"ZBar" withExtension:@"bundle"];
@@ -148,7 +148,6 @@
             //lineView.backgroundColor = [UIColor orangeColor];
             //[polygonView addSubview:lineView];
 
-			
 			
 			//endtest
 			
