@@ -75,6 +75,7 @@
         polygonView.layer.borderColor = [UIColor whiteColor].CGColor;
         polygonView.layer.borderWidth = 2.0f;
 		polygonView.layer.cornerRadius = 20.0f;
+		polygonView.layer.masksToBounds = YES;
 
         // UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
         // lineView.backgroundColor = [UIColor orangeColor];
