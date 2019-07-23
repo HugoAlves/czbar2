@@ -24,9 +24,11 @@
     CGRect frame;
     
     if (screenRect.size.height > (screenRect.size.width)) {
-        frame = CGRectMake(0,0, screenRect.size.width*(0.15), screenRect.size.height*0.15);
+        //frame = CGRectMake(0,0, screenRect.size.width*(0.15), screenRect.size.height*0.15);
+		frame = CGRectMake(0,0, screenRect.size.width*(0.05), screenRect.size.height*0.05);
     }else{
-        frame = CGRectMake(0,0, screenRect.size.width*(0.10), screenRect.size.height*0.20);
+        //frame = CGRectMake(0,0, screenRect.size.width*(0.10), screenRect.size.height*0.20);
+		frame = CGRectMake(0,0, screenRect.size.width*(0.05), screenRect.size.height*0.05);
     }
     
     button.frame =frame;
@@ -54,7 +56,7 @@
 }
 
 - (BOOL)shouldAutorotate{
-    return YES;
+    return NO;
 }
 
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation) fromInterfaceOrientation {

@@ -60,6 +60,8 @@
             self.scanReader.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         }
         self.scanReader.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;
+		//testMB
+		self.scanReader.showsZBarControls=NO;
 
         NSString *flash = [params objectForKey:@"flash"];
         
