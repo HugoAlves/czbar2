@@ -82,7 +82,7 @@
 }
 
 - (void)buttonCancelPressed: (UIButton *) buttonCancel {
-    [self.view dismissViewControllerAnimated:YES completion:nil]; // dismiss the current view controller
+     [self.view presentViewController:self.scanReader animated:YES completion:nil]; // dismiss the current view controller
 
 }
 
