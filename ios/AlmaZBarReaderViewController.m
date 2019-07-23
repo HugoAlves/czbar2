@@ -25,18 +25,44 @@
     
     if (screenRect.size.height > (screenRect.size.width)) {
         //frame = CGRectMake(0,0, screenRect.size.width*(0.15), screenRect.size.height*0.15);
-		frame = CGRectMake(0,0, screenRect.size.width*(0.05), screenRect.size.height*0.05);
+		frame = CGRectMake(0,0, 0, 0);
     }else{
         //frame = CGRectMake(0,0, screenRect.size.width*(0.10), screenRect.size.height*0.20);
-		frame = CGRectMake(0,0, screenRect.size.width*(0.05), screenRect.size.height*0.05);
+		frame = CGRectMake(0,0, 0, 0);
     }
     
     button.frame =frame;
-    button.layer.cornerRadius = 10;
+    //button.layer.cornerRadius = 10;
     button.clipsToBounds = YES;
     
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+	
+	
+	
+	//test cancel
+	
+	 UIButton *buttonCancel = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    //[button setTitle:@"Flash" forState:UIControlStateNormal];
+    [button sizeToFit];
+    CGRect screenRect2 = [[UIScreen mainScreen] bounds];
+    //[button setContentEdgeInsets:UIEdgeInsetsMake(20, 30, 20, 30)];
+    CGRect frame2;
+    
+    if (screenRect2.size.height > (screenRect.size.width)) {
+        frame2 = CGRectMake(0,0, screenRect.size.width*(0.15), screenRect.size.height*0.15);
+		//frame = CGRectMake(0,0, 0, 0);
+    }else{
+        frame2 = CGRectMake(0,0, screenRect.size.width*(0.10), screenRect.size.height*0.20);
+		//frame = CGRectMake(0,0, 0, 0);
+    }
+    
+    buttonCancel.frame2 =frame2;
+    //button.layer.cornerRadius = 10;
+    buttonCancel.clipsToBounds = YES;
+    
+    [buttonCancel addTarget:self action:@selector(buttonCancelPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:buttonCancel];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -53,6 +79,11 @@
     CsZBar *obj = [[CsZBar alloc] init];
     
     [obj toggleflash];
+}
+
+- (void)buttonCancelPressed: (UIButton *) buttonCancel {
+    [self.view dismissViewControllerAnimated:YES completion:nil]; // dismiss the current view controller
+
 }
 
 - (BOOL)shouldAutorotate{
